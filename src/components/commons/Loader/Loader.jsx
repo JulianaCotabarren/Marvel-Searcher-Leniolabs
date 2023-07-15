@@ -1,9 +1,12 @@
+import Circle from "./styles/Circle"
+import LoaderWrapper from "./styles/LoaderWrapper"
 
-
-const Loader = ({loading=true}) => {
+const Loader = ({loading}) => {
   return (
-    <h1 loading={loading ? true : false}>Loading</h1>
+    <LoaderWrapper>
+        <Circle loading={loading ? 1 : 0} />        
+    </LoaderWrapper>   
   )
 }
 
-export default Loader
+export default Loader;
