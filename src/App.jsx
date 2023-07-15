@@ -1,10 +1,12 @@
+import CharactersProvider from "./context/CharactersContext"
+import Main from "./layout/Main/Main"
 
 function App() {
 
   return (
-    <h1>
-      App
-    </h1>
+    <CharactersProvider>
+      <Main/>
+    </CharactersProvider>
   )
 }
 
