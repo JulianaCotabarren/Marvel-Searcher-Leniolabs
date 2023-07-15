@@ -1,9 +1,9 @@
 
 
-const Modal = () => {
+const Modal = ({handleClose}) => {
   return (
     <div>
-        <button>close</button>
+        <button onClick={handleClose}>close</button>
         <h1>Hero name</h1>
         <div>
             <img src="" alt="Comic img" />
