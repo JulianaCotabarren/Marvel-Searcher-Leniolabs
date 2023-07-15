@@ -1,14 +1,17 @@
 import { useContext } from "react"
 import { CharactersContext } from "../../context/CharactersContext"
+import Loader from "../../components/commons/Loader/Loader";
 
 
 const Main = () => {
-    const {characters} = useContext(CharactersContext);
+    const {characters, loading: charactersLoading } = useContext(CharactersContext);
 
   return (
-    <div>
-        { characters.map((character)=> (<li key={character.id}>{character.name}</li>)) }
-    </div>
+    <>
+        { charactersLoading ? ( <Loader/> ) : 
+            <div> { characters.map((character)=> (<li key={character.id}>{character.name}</li>)) } </div>
+        }
+    </>    
   )
 }
 
