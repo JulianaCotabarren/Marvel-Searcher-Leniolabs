@@ -8,17 +8,19 @@ export const CharactersContext = createContext();
 
 const CharactersProvider = ({children}) => {
     const [characters, setCharacters] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
       const getCharacters = async() => {
         const charactersResponse = await axios.get(`${API_URL}/characters?${AUTH_QUERIES}`);
+        setLoading(false);
         setCharacters(charactersResponse.data.data.results);
       };
       getCharacters();
     }, []);   
 
   return (
-    <CharactersContext.Provider value={{ characters }}>
+    <CharactersContext.Provider value={{ characters, loading, setLoading }}>
         {children}
     </CharactersContext.Provider>
   )
