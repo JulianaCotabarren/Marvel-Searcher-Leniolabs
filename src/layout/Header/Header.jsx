@@ -4,6 +4,11 @@ import HeaderWrapper from "./styles/HeaderWrapper";
 import HeaderInput from "./styles/HeaderInput";
 import HeaderInputWrapper from "./styles/HeaderInputWrapper";
 import { ComicDetailContext } from "../../context/ComicDetailContext";
+import HeaderLogo from "./styles/HeaderLogo";
+import marvelLogo from "../../assets/images/marvelLogo.svg";
+import searchIcon from '../../assets/images/search-icon.png';
+import SearchIcon from "./styles/SearchIcon";
+import Star from "../../components/commons/Star/Star";
 
 const Header = () => {
     let searchTimer;
@@ -33,8 +38,9 @@ const Header = () => {
 
   return (
     <HeaderWrapper>
-        <button>Marvel</button>
+        <HeaderLogo src={marvelLogo} alt="Marvel logo"/>
         <HeaderInputWrapper>
+            <SearchIcon src={searchIcon}/>
             <HeaderInput 
                 type="text" 
                 placeholder="Search"
@@ -44,7 +50,7 @@ const Header = () => {
                 onClick={() => setInputActive(true)}
             />
         </HeaderInputWrapper>        
-        <button>Favourites</button>
+        <Star/>
     </HeaderWrapper>
   )
 }
