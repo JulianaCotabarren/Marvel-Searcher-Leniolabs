@@ -1,10 +1,11 @@
+import CharactersProvider from "./context/CharactersContext"
 
 function App() {
 
   return (
-    <h1>
+    <CharactersProvider>
       App
-    </h1>
+    </CharactersProvider>
   )
 }
 
