@@ -3,19 +3,30 @@ import { CharactersContext } from "../../context/CharactersContext";
 import HeaderWrapper from "./styles/HeaderWrapper";
 import HeaderInput from "./styles/HeaderInput";
 import HeaderInputWrapper from "./styles/HeaderInputWrapper";
+import { ComicDetailContext } from "../../context/ComicDetailContext";
 
 const Header = () => {
     let searchTimer;
     const inputRef = useRef(null);   
     const [isInputActive, setInputActive] = useState(false);
-    const { setLoading: setLoadingCharacters, setSearch, setUrlCharacters } = useContext(CharactersContext);
+    const { setLoading: setLoadingCharacters, setSearch, setUrlCharacters, setUrlComics } = useContext(CharactersContext);
+    const { setLoading: setLoadingComicDetail, setComicId } = useContext(ComicDetailContext);
 
     const handleInputChange = () => {
         setLoadingCharacters(true);    
         clearInterval(searchTimer);
         searchTimer = setTimeout(() => {
             setUrlCharacters([]);
-            const search = inputRef.current.value;    
+            setUrlComics([]);
+            const search = inputRef.current.value;
+            const isComic = search.includes('comics/');
+            if (isComic) {
+                setLoadingComicDetail(true);
+                setLoadingCharacters(false);
+                setComicId(search.split('/')[5]);
+                return;
+            }
+            setComicId(null);
             setSearch(search);
         }, 600);
       };
@@ -32,8 +43,7 @@ const Header = () => {
                 onChange={handleInputChange}
                 onClick={() => setInputActive(true)}
             />
-        </HeaderInputWrapper>
-        
+        </HeaderInputWrapper>        
         <button>Favourites</button>
     </HeaderWrapper>
   )
