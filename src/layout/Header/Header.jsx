@@ -1,5 +1,8 @@
 import { useContext, useRef, useState } from "react"
 import { CharactersContext } from "../../context/CharactersContext";
+import HeaderWrapper from "./styles/HeaderWrapper";
+import HeaderInput from "./styles/HeaderInput";
+import HeaderInputWrapper from "./styles/HeaderInputWrapper";
 
 const Header = () => {
     let searchTimer;
@@ -18,18 +21,21 @@ const Header = () => {
       };
 
   return (
-    <div>
+    <HeaderWrapper>
         <button>Marvel</button>
-        <input 
-            type="text" 
-            placeholder="Search"
-            ref={inputRef}
-            aria-activedescendant={isInputActive}
-            onChange={handleInputChange}
-            onClick={() => setInputActive(true)}
-        />
+        <HeaderInputWrapper>
+            <HeaderInput 
+                type="text" 
+                placeholder="Search"
+                ref={inputRef}
+                aria-activedescendant={isInputActive}
+                onChange={handleInputChange}
+                onClick={() => setInputActive(true)}
+            />
+        </HeaderInputWrapper>
+        
         <button>Favourites</button>
-    </div>
+    </HeaderWrapper>
   )
 }
 
