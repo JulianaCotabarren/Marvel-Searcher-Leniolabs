@@ -1,6 +1,7 @@
 import { useContext } from "react"
 import { CharactersContext } from "../../context/CharactersContext"
 import Loader from "../../components/commons/Loader/Loader";
+import CardList from "../../components/CardList/CardList";
 
 
 const Main = () => {
@@ -8,9 +9,7 @@ const Main = () => {
 
   return (
     <>
-        { charactersLoading ? ( <Loader/> ) : 
-            <div> { characters.map((character)=> (<li key={character.id}>{character.name}</li>)) } </div>
-        }
+        { charactersLoading ? ( <Loader/> ) : (<CardList/>) }
     </>    
   )
 }
