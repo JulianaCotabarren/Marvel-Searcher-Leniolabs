@@ -15,7 +15,6 @@ const CharactersProvider = ({children}) => {
         setCharacters(charactersResponse.data.data.results);
       };
       getCharacters();
-      console.log(characters);
     }, []);   
 
   return (
