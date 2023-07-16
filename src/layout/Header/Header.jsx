@@ -9,10 +9,12 @@ import marvelLogo from "../../assets/images/marvelLogo.svg";
 import searchIcon from '../../assets/images/search-icon.png';
 import SearchIcon from "./styles/SearchIcon";
 import Star from "../../components/commons/Star/Star";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
     let searchTimer;
-    const inputRef = useRef(null);   
+    const inputRef = useRef(null);
+    const { pathname } = useLocation();
     const [isInputActive, setInputActive] = useState(false);
     const { setLoading: setLoadingCharacters, setSearch, setUrlCharacters, setUrlComics } = useContext(CharactersContext);
     const { setLoading: setLoadingComicDetail, setComicId } = useContext(ComicDetailContext);
@@ -49,8 +51,10 @@ const Header = () => {
                 onChange={handleInputChange}
                 onClick={() => setInputActive(true)}
             />
-        </HeaderInputWrapper>        
-        <Star/>
+        </HeaderInputWrapper>
+        <Link to="/favorites">
+            <Star fill={pathname === '/favorites'}/>        
+        </Link>
     </HeaderWrapper>
   )
 }

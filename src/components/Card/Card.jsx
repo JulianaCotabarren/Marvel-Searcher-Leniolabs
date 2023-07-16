@@ -27,7 +27,7 @@ const Card = ({character}) => {
     };
     const handleStarClick = (event) => {
       event.stopPropagation();
-      console.log('Favorite added');
+      isFavorite ? removeFavorite(character) : addFavorite(character);
     }
 
   return (
