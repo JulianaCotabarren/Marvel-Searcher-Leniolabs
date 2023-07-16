@@ -26,7 +26,7 @@ const Card = ({character}) => {
           <CardImageWrapper src={`${thumbnail.path}.${thumbnail.extension}`} alt={name} />
           <CardTitleWrapper>{name}</CardTitleWrapper>
       </CardWrapper>
-      { showModal && <Modal show={showModal} handleClose={handleClose} /> }
+      { showModal && <Modal show={showModal} handleClose={handleClose} title={name}/> }
     </>  
   );
 };
