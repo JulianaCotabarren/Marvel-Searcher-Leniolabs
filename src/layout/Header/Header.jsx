@@ -40,7 +40,9 @@ const Header = () => {
 
   return (
     <HeaderWrapper>
-        <HeaderLogo src={marvelLogo} alt="Marvel logo"/>
+        <Link to="/">
+            <HeaderLogo src={marvelLogo} alt="Marvel logo"/>        
+        </Link>
         <HeaderInputWrapper>
             <SearchIcon src={searchIcon}/>
             <HeaderInput 
