@@ -1,12 +1,12 @@
-import CardList from "../../components/CardList/CardList"
-import FavoritesWrapper from "./styles/FavoritesWrapper"
+import CardList from '../../components/CardList/CardList';
+import FavoritesWrapper from './styles/FavoritesWrapper';
 
 const Favorites = () => {
   return (
     <FavoritesWrapper>
-        <CardList/>
+      <CardList />
     </FavoritesWrapper>
-  )
-}
+  );
+};
 
-export default Favorites
+export default Favorites;

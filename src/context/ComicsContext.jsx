@@ -1,9 +1,9 @@
-import { createContext } from "react"
-import useComics from "../hooks/useComics";
+import { createContext } from 'react';
+import useComics from '../hooks/useComics';
 
 export const ComicsContext = createContext();
 
-const ComicsProvider = ({children}) => {
+const ComicsProvider = ({ children }) => {
   const {
     loading,
     limit,
@@ -13,11 +13,11 @@ const ComicsProvider = ({children}) => {
     setLimit,
     setCollectionUri,
     setComics,
-  } = useComics();  
-    
+  } = useComics();
+
   return (
-    <ComicsContext.Provider 
-      value={{ 
+    <ComicsContext.Provider
+      value={{
         loading,
         limit,
         collectionUri,
@@ -30,7 +30,7 @@ const ComicsProvider = ({children}) => {
     >
       {children}
     </ComicsContext.Provider>
-  )
-}
+  );
+};
 
 export default ComicsProvider;
