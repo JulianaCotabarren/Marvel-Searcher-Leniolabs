@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { ComicsContext } from '../../context/ComicsContext';
-import Loader from '../commons/Loader/Loader';
 import { CharactersContext } from '../../context/CharactersContext';
+import Loader from '../commons/Loader/Loader';
 import Comic from '../Comic/Comic';
 import ComicsListWrapper from './styles/ComicListWrapper';
 

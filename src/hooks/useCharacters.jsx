@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import qs from 'query-string';
 import axios from 'axios';
+import qs from 'query-string';
 import { API_URL, AUTH_QUERIES, TOTAL_CHARACTERS } from '../constants';
 import { getRandomInt } from '../utils/getRandomInt';
 

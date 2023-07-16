@@ -1,11 +1,11 @@
 import { useContext, useState } from 'react';
+import { ComicsContext } from '../../context/ComicsContext';
+import { FavoritesContext } from '../../context/FavoritesContext';
+import Modal from '../Modal/Modal';
+import Star from '../commons/Star/Star';
 import CardImageWrapper from './styles/CardImageWrapper';
 import CardTitleWrapper from './styles/CardTitleWrapper';
 import CardWrapper from './styles/CardWrapper';
-import { ComicsContext } from '../../context/ComicsContext';
-import Modal from '../Modal/Modal';
-import Star from '../commons/Star/Star';
-import { FavoritesContext } from '../../context/FavoritesContext';
 import CardStarWrapper from './styles/CardStarWrapper';
 
 const Card = ({ character }) => {

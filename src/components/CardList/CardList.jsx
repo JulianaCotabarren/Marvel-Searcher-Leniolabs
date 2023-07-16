@@ -1,9 +1,9 @@
 import { useContext } from 'react';
+import { useLocation } from 'react-router';
 import { CharactersContext } from '../../context/CharactersContext';
+import { FavoritesContext } from '../../context/FavoritesContext';
 import Card from '../Card/Card';
 import CardsListWrapper from './styles/CardListWrapper';
-import { FavoritesContext } from '../../context/FavoritesContext';
-import { useLocation } from 'react-router';
 
 const CardList = () => {
   const { pathname } = useLocation();

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { respondTo } from '../../../styles/mixins/responsive';
 
-const ComicDetailDescription = styled.div`
+const ComicDetailDescriptionWrapper = styled.div`
   width: 100%;
   position: relative;
   font-weight: 300;
@@ -16,4 +16,4 @@ const ComicDetailDescription = styled.div`
     `}
 `;
 
-export default ComicDetailDescription;
+export default ComicDetailDescriptionWrapper;

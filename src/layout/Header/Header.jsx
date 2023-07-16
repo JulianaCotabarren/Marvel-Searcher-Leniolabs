@@ -1,15 +1,15 @@
 import { useContext, useRef, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { CharactersContext } from '../../context/CharactersContext';
-import HeaderWrapper from './styles/HeaderWrapper';
-import HeaderInput from './styles/HeaderInput';
-import HeaderInputWrapper from './styles/HeaderInputWrapper';
 import { ComicDetailContext } from '../../context/ComicDetailContext';
+import HeaderInput from './styles/HeaderInput';
 import HeaderLogo from './styles/HeaderLogo';
 import marvelLogo from '../../assets/images/marvelLogo.svg';
 import searchIcon from '../../assets/images/search-icon.png';
 import SearchIcon from './styles/SearchIcon';
 import Star from '../../components/commons/Star/Star';
-import { Link, useLocation } from 'react-router-dom';
+import HeaderWrapper from './styles/HeaderWrapper';
+import HeaderInputWrapper from './styles/HeaderInputWrapper';
 
 const Header = () => {
   let searchTimer;

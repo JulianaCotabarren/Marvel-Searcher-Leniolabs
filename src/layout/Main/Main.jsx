@@ -1,10 +1,10 @@
 import { useContext } from 'react';
 import { CharactersContext } from '../../context/CharactersContext';
+import { ComicDetailContext } from '../../context/ComicDetailContext';
 import Loader from '../../components/commons/Loader/Loader';
 import CardList from '../../components/CardList/CardList';
-import MainWrapper from './styles/MainWrapper';
-import { ComicDetailContext } from '../../context/ComicDetailContext';
 import ComicDetail from '../../components/ComicDetail/ComicDetail';
+import MainWrapper from './styles/MainWrapper';
 
 const Main = () => {
   const { loading: charactersLoading } = useContext(CharactersContext);

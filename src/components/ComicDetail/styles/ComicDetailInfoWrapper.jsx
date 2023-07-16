@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { respondTo } from '../../../styles/mixins/responsive';
 
-const ComicDetailInfo = styled.div`
+const ComicDetailInfoWrapper = styled.div`
   flex: 0 0 100%;
   left: 45vw;
   padding: 0 30px;
@@ -14,4 +14,4 @@ const ComicDetailInfo = styled.div`
     `}
 `;
 
-export default ComicDetailInfo;
+export default ComicDetailInfoWrapper;

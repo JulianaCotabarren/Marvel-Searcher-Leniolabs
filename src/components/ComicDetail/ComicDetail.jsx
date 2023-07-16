@@ -3,9 +3,9 @@ import { ComicDetailContext } from '../../context/ComicDetailContext';
 import ComicDetailWrapper from './styles/ComicDetailWrapper';
 import ComicDetailImageWrapper from './styles/ComicDetailImageWrapper';
 import ComicDetailTitleWrapper from './styles/ComicDetailTitleWrapper';
-import ComicDetailInfo from './styles/ComicDetailInfoWrapper';
-import ComicDetailSubTitle from './styles/ComicDetailSubtitleWrapper';
-import ComicDetailDescription from './styles/ComicDetailDescription';
+import ComicDetailInfoWrapper from './styles/ComicDetailInfoWrapper';
+import ComicDetailSubTitleWrapper from './styles/ComicDetailSubtitleWrapper';
+import ComicDetailDescriptionWrapper from './styles/ComicDetailDescriptionWrapper';
 
 const ComicDetail = () => {
   const {
@@ -16,13 +16,13 @@ const ComicDetail = () => {
   return (
     <ComicDetailWrapper>
       <ComicDetailImageWrapper src={`${thumbnail.path}.${thumbnail.extension}`} alt={title} />
-      <ComicDetailInfo>
+      <ComicDetailInfoWrapper>
         <ComicDetailTitleWrapper>{title}</ComicDetailTitleWrapper>
-        <ComicDetailSubTitle>Published: {parsedDate}</ComicDetailSubTitle>
-        <ComicDetailDescription>
+        <ComicDetailSubTitleWrapper>Published: {parsedDate}</ComicDetailSubTitleWrapper>
+        <ComicDetailDescriptionWrapper>
           {description ? description : 'No description'}
-        </ComicDetailDescription>
-      </ComicDetailInfo>
+        </ComicDetailDescriptionWrapper>
+      </ComicDetailInfoWrapper>
     </ComicDetailWrapper>
   );
 };

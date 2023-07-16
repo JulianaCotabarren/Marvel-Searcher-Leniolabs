@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const ComicDetailSubTitle = styled.p`
+const ComicDetailSubTitleWrapper = styled.p`
   width: 100%;
   position: relative;
   font-weight: 600;
@@ -14,4 +14,4 @@ const ComicDetailSubTitle = styled.p`
   }
 `;
 
-export default ComicDetailSubTitle;
+export default ComicDetailSubTitleWrapper;
