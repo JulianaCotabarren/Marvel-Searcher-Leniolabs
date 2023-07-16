@@ -4,7 +4,7 @@ const CardStarWrapper = styled.div`
     background: transparent;
     position: absolute;
     top: 0;
-    right: 10px;
+    right: 0;
 `;
 
 export default CardStarWrapper;

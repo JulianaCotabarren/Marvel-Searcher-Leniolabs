@@ -1,10 +1,11 @@
 import CardList from "../../components/CardList/CardList"
+import FavoritesWrapper from "./styles/FavoritesWrapper"
 
 const Favorites = () => {
   return (
-    <div>
+    <FavoritesWrapper>
         <CardList/>
-    </div>
+    </FavoritesWrapper>
   )
 }
 
