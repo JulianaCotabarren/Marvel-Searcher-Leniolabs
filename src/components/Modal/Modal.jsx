@@ -1,13 +1,23 @@
 import ComicList from "../ComicList/ComicList"
+import ModalCardWrapper from "./styles/ModalCardWrapper"
+import ModalCloseBtnWrapper from "./styles/ModalCloseBtnWrapper"
+import ModalTitleWrapper from "./styles/ModalTitleWrapper"
+import ModalWrapper from "./styles/ModalWrapper"
 
 
-const Modal = ({handleClose, title}) => {
+const Modal = ({handleClose, title, show}) => {
   return (
-    <div>
-        <button onClick={handleClose}>close</button>
-        <h1>{title}</h1>
-        <ComicList/>
-    </div>
+    <ModalWrapper show={show} onClick={handleClose}>
+        <ModalCardWrapper onClick={event => event.stopPropagation()}>
+            <ModalTitleWrapper>
+                {title}
+                <ModalCloseBtnWrapper onClick={handleClose}>
+                    <span aria-hidden="true">&times;</span>
+                </ModalCloseBtnWrapper>
+            </ModalTitleWrapper>                
+            <ComicList/>
+        </ModalCardWrapper>        
+    </ModalWrapper>
   )
 }
 
