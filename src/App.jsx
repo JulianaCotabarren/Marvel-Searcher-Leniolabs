@@ -1,20 +1,26 @@
+import { BrowserRouter } from "react-router-dom"
 import CharactersProvider from "./context/CharactersContext"
 import ComicDetailProvider from "./context/ComicDetailContext"
 import ComicsProvider from "./context/ComicsContext"
+import FavoritesProvider from "./context/FavoritesContext"
 import Header from "./layout/Header/Header"
-import Main from "./layout/Main/Main"
+import Router from "./routes"
 
-function App() {
+const App = () => {
 
   return (
-    <CharactersProvider>
-      <ComicsProvider>
-        <ComicDetailProvider>
-          <Header/>
-          <Main/>
-        </ComicDetailProvider>  
-      </ComicsProvider>      
-    </CharactersProvider>
+    <FavoritesProvider>
+      <CharactersProvider>
+        <ComicsProvider>
+          <ComicDetailProvider>
+            <BrowserRouter>
+              <Header/>
+              <Router/>
+            </BrowserRouter>           
+          </ComicDetailProvider>  
+        </ComicsProvider>      
+      </CharactersProvider>  
+    </FavoritesProvider>
   )
 }
 
