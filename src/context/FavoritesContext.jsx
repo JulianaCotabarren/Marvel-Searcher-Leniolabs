@@ -1,23 +1,25 @@
 import { useState } from "react";
 import { createContext } from "react";
-
+import useFavorites from "../hooks/useFavorites";
 
 export const FavoritesContext = createContext();
 
 const FavoritesProvider = ({children}) => {
-    const [favorites, setFavorites] = useState([]);
-
-    const addFavorite = character => {
-        setFavorites([...favorites, character]);
-    }
-
-    const removeFavorite = character => {
-        setFavorites([...favorites.filter(favorite => favorite.id !== character.id)]);
-    }
+  const { 
+    favorites, 
+    addFavorite, 
+    removeFavorite 
+  } = useFavorites();
 
   return (
-    <FavoritesContext.Provider value={{ favorites, addFavorite, removeFavorite }}>
-        {children}
+    <FavoritesContext.Provider 
+      value={{ 
+        favorites, 
+        addFavorite, 
+        removeFavorite 
+      }}
+    >
+      {children}
     </FavoritesContext.Provider>
   )
 }
