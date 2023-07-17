@@ -7,10 +7,9 @@ export default createGlobalStyle`
 body {
     align-items: center;
     min-height: 100vh;
-    width: 100%;
+    min-width: 100vw;
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat', Roboto, Helvetica, Arial, sans-serif;
     transition: background .3s ease, color .3s ease;
 }
 `;
