@@ -6,8 +6,8 @@ const HeaderLogo = styled.img`
   height: 30px;
   flex-basis: 10%;
   position: relative;
-  padding-right: 10px;
-  border-right: 1px solid #a6a2a2;
+  padding-right: 20px;
+  border-right: 1px solid ${({ theme }) => theme.text};
   transition: border-right-color 300ms ease;
 
   ${respondTo.sm`

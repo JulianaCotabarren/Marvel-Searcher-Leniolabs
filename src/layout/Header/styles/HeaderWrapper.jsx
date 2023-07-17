@@ -11,7 +11,7 @@ const HeaderWrapper = styled.header`
   align-items: center;
   justify-content: center;
   padding: 10px 15px;
-  background: #fff;
+  background: ${({ theme }) => theme.header};
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
   transition: background 0.3s ease;
 `;
