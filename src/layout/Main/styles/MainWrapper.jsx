@@ -4,7 +4,6 @@ import { respondTo } from '../../../styles/mixins/responsive';
 const MainWrapper = styled.div`
   min-height: 100vh;
   padding: 5rem 0 2rem 0;
-  background: transparent;
   background: ${({ theme }) => theme.body};
   color: ${({ theme }) => theme.text};
   margin: -0.5rem;
