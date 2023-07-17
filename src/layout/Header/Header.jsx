@@ -10,8 +10,10 @@ import SearchIcon from './styles/SearchIcon';
 import Star from '../../components/commons/Star/Star';
 import HeaderWrapper from './styles/HeaderWrapper';
 import HeaderInputWrapper from './styles/HeaderInputWrapper';
+import Toggle from '../../components/commons/Toggle/Toggle';
+import HeaderActions from './styles/HeaderActions';
 
-const Header = () => {
+const Header = ({ theme, isLight, toggleTheme }) => {
   let searchTimer;
   const inputRef = useRef(null);
   const { pathname } = useLocation();
@@ -59,9 +61,12 @@ const Header = () => {
           onClick={() => setInputActive(true)}
         />
       </HeaderInputWrapper>
-      <Link to="/favorites">
-        <Star fill={pathname === '/favorites'} />
-      </Link>
+      <HeaderActions>
+        <Link to="/favorites">
+          <Star fill={pathname === '/favorites'} />
+        </Link>
+        <Toggle theme={theme} isLight={isLight} toggleTheme={toggleTheme} />
+      </HeaderActions>
     </HeaderWrapper>
   );
 };

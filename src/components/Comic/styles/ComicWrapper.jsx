@@ -5,7 +5,7 @@ const ComicWrapper = styled.div`
   max-height: 95px;
   display: flex;
   margin-bottom: 10px;
-  background: #fff;
+  background: ${({ theme }) => theme.body};
   position: relative;
 `;
 

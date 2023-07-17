@@ -11,6 +11,7 @@ const ModalCloseBtnWrapper = styled.button`
   border: none;
   outline: none;
   transition: color 300ms ease;
+  color: ${({ theme }) => theme.text};
 `;
 
 export default ModalCloseBtnWrapper;

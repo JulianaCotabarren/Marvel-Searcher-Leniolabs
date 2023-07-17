@@ -5,9 +5,10 @@ const ComicDetailWrapper = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  background: #f8f9fa;
   box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
   border-radius: 0.3rem;
+  background: ${({ theme }) => theme.body};
+  color: ${({ theme }) => theme.text};
 
   ${respondTo.sm`
         flex-wrap: no-wrap;

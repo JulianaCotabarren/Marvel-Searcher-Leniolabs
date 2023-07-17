@@ -2,7 +2,8 @@ import styled from 'styled-components';
 import { respondTo } from '../../../styles/mixins/responsive';
 
 const ModalCardWrapper = styled.div`
-  background: #fff;
+  background: ${({ theme }) => theme.body};
+  color: ${({ theme }) => theme.text};
   cursor: default;
   position: absolute;
   width: 50%;
