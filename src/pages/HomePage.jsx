@@ -1,12 +1,11 @@
-import Main from "../layout/Main/Main"
-
+import Main from '../layout/Main/Main';
 
 const HomePage = () => {
   return (
     <div>
-        <Main/>
+      <Main />
     </div>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;
