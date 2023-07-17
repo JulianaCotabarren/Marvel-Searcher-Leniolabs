@@ -2,7 +2,7 @@ const lightTheme = {
   body: '#F7F8FA',
   header: '#FFFFFF',
   input: '#FFFFFF',
-  text: '#a6a2a2',
+  text: '#363537',
 };
 
 const darkTheme = {

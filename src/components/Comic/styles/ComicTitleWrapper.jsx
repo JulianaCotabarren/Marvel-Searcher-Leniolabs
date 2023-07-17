@@ -6,6 +6,7 @@ const ComicTitleWrapper = styled.div`
   margin-bottom: 5px;
   position: relative;
   padding-right: 30px;
+  color: ${({ theme }) => theme.text};
 `;
 
 export default ComicTitleWrapper;
