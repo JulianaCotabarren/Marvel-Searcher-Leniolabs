@@ -4,7 +4,7 @@ import { respondTo } from '../../../styles/mixins/responsive';
 const ComicDetailTitleWrapper = styled.div`
   width: 100%;
   position: relative;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.3rem;
   margin-top: 1rem;
   margin-bottom: 3rem;

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const ComicDetailSubTitleWrapper = styled.p`
   width: 100%;
   position: relative;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 18px;
   padding-right: 25px;
   text-transform: capitalize;

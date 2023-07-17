@@ -9,6 +9,7 @@ const CardTitleWrapper = styled.div`
   background: rgb(0, 0, 0);
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 35%, rgba(0, 0, 0, 0) 100%);
   color: #fff;
+  font-family: Roboto, Helvetica, sans-serif;
 `;
 
 export default CardTitleWrapper;

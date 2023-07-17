@@ -12,7 +12,7 @@ const ComicDetailDescriptionWrapper = styled.div`
         font-size: 1rem;
     `}
   ${respondTo.md`
-        font-size: 1.1rem;
+        font-size: 1rem;
     `}
 `;
 

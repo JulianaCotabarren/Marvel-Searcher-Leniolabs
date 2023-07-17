@@ -9,6 +9,7 @@ const ComicDetailWrapper = styled.div`
   border-radius: 0.3rem;
   background: ${({ theme }) => theme.body};
   color: ${({ theme }) => theme.text};
+  font-family: Roboto, Helvetica, sans-serif;
 
   ${respondTo.sm`
         flex-wrap: no-wrap;
