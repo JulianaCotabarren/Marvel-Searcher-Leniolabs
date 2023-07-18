@@ -5,6 +5,7 @@ const ComicInfoWrapper = styled.div`
   flex-direction: column;
   padding: 0 10px;
   color: ${({ theme }) => theme.text};
+  font-family: Roboto, Helvetica, sans-serif;
 `;
 
 export default ComicInfoWrapper;

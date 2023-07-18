@@ -6,6 +6,9 @@ const CardImageWrapper = styled.img`
   width: 100%;
   height: 380px;
   border-radius: 5px;
+  &:hover {
+    filter: contrast(0.8);
+  }
 `;
 
 export default CardImageWrapper;
