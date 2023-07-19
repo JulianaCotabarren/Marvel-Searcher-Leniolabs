@@ -1,35 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
+import CharactersProvider from './context/CharactersContext';
+import ComicDetailProvider from './context/ComicDetailContext';
+import ComicsProvider from './context/ComicsContext';
+import FavoritesProvider from './context/FavoritesContext';
+import useTheme from './hooks/useTheme';
+import Header from './layout/Header/Header';
+import Router from './routes';
+import { darkTheme } from './themes';
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const { currentTheme, isLightTheme, toggleTheme } = useTheme(darkTheme);
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <ThemeProvider theme={currentTheme}>
+      <FavoritesProvider>
+        <CharactersProvider>
+          <ComicsProvider>
+            <ComicDetailProvider>
+              <BrowserRouter>
+                <Header theme={currentTheme} isLight={isLightTheme()} toggleTheme={toggleTheme} />
+                <Router />
+              </BrowserRouter>
+            </ComicDetailProvider>
+          </ComicsProvider>
+        </CharactersProvider>
+      </FavoritesProvider>
+    </ThemeProvider>
+  );
+};
 
-export default App
+export default App;
