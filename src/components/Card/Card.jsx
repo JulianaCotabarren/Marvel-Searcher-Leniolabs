@@ -16,7 +16,7 @@ const Card = ({ character }) => {
   const { favorites, addFavorite, removeFavorite } = useContext(FavoritesContext);
 
   const isFavorite = favorites.some((favorite) => favorite.id === id);
-  const thumbnailPath = thumbnail.path;
+  const thumbnailPath = thumbnail.path.replace('http', 'https');
 
   const imgSrc = thumbnailPath.includes('image_not_available')
     ? `${marvelCharacters}`
