@@ -4,7 +4,7 @@ Project developed with React using the Marvel API to search for characters.
 
 ### DEMO
 
-![Marvel Searcher](https://github.com/JulianaCotabarren/Marvel-Searcher-Leniolabs/assets/118850234/350fd2cd-d6ac-467e-ae02-a4c6d64d3fa0)
+![Marvel Searcher](https://github.com/JulianaCotabarren/Marvel-Searcher-Leniolabs/assets/118850234/0423dc8e-cd32-4e2c-a392-74609c90322b)
 
 ### Deployment
 
