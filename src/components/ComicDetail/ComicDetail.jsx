@@ -15,7 +15,10 @@ const ComicDetail = () => {
 
   return (
     <ComicDetailWrapper>
-      <ComicDetailImageWrapper src={`${thumbnail.path}.${thumbnail.extension}`} alt={title} />
+      <ComicDetailImageWrapper
+        src={`${thumbnail.path.replace('http', 'https')}.${thumbnail.extension}`}
+        alt={title}
+      />
       <ComicDetailInfoWrapper>
         <ComicDetailTitleWrapper>{title}</ComicDetailTitleWrapper>
         <ComicDetailSubTitleWrapper>Published: {parsedDate}</ComicDetailSubTitleWrapper>

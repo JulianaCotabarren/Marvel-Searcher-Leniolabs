@@ -9,7 +9,10 @@ const Comic = ({ comic }) => {
 
   return (
     <ComicWrapper>
-      <ComicImageWrapper src={`${thumbnail.path}.${thumbnail.extension}`} alt={title} />
+      <ComicImageWrapper
+        src={`${thumbnail.path.replace('http', 'https')}.${thumbnail.extension}`}
+        alt={title}
+      />
       <ComicInfoWrapper>
         <ComicTitleWrapper>{title}</ComicTitleWrapper>
         <ComicDescriptionWrapper>

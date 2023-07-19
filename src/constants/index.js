@@ -1,4 +1,4 @@
-const API_URL = 'http://gateway.marvel.com/v1/public';
+const API_URL = 'https://gateway.marvel.com/v1/public';
 const TS = import.meta.env.VITE_MARVEL_API_TIMESTAMP;
 const HASH = import.meta.env.VITE_MARVEL_API_HASH;
 const API_KEY = import.meta.env.VITE_MARVEL_API_PUBLIC_KEY;
